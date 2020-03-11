@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Markus Randma 136.a Kunstiblogi</title>
+<style>
+
+body {
+	
+	background-color: rgb(219,214,239)
+}
+#item { 
+	position: absolute;
+	transition: linear 2s;
+	animation: spin 10s linear infinite;
+	border:0;
+}
+#item2 {
+	position: absolute;
+	transition: linear 3s;
+	animation: spin 15s linear infinite;
+	border:0;
+
+}
+#item3 {
+	position: absolute;
+	transition: linear 2.5s;
+	animation: spin2 7s linear infinite;
+	border:0;
+
+}
+#item4 {
+	position: absolute;
+	transition: linear 1.5s;
+	animation: spin2 4s linear infinite;
+	border:0;
+
+}
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+  @keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+p {
+  border: 2px solid powderblue;
+  padding: 10px;
+  margin: auto;
+  margin-top: 20px;
+  width: 90%;
+  background-color: rgb(222, 234, 226);
+  postition: relative;
+  transform: translate(50,0);
+  opacity: 0.8;
+  box-shadow: 2px 3px 8px #888888;
+  font-family: Verdana;
+  border-radius: 3px;
+  
+}
+div_H1 {
+	color: rgb(10,40,50);
+	font-size: 25px;
+	text-shadow: 1px 1px 2px #001030;
+}
+div.H1 {
+	color: rgb(10,40,50);
+	text-align: center;
+	font-size: 40px;
+	text-shadow: 1px 1px 2px #001030;
+}
+div_date {
+	color: rbg(127,127,127);
+	font-size: 11px;
+}
+img {
+	max-width: 50%;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	margin-right: 60%;
+	margin-left: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	transition: 0.2s;
+}
+img:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+</style>
+<img id="item"
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Sierpinski_triangle.svg/1200px-Sierpinski_triangle.svg.png"
+width="256" height=auto>
+<img id="item2"
+src="https://drive.google.com/uc?export=view&id=1_Qe4fiOKDIEy_EsanYGAPJlKEO73op00"
+width="256" height=auto>
+<img id="item3"
+src="https://drive.google.com/uc?export=view&id=1_Qe4fiOKDIEy_EsanYGAPJlKEO73op00"
+width="256" height=auto>
+<img id="item4"
+src="https://bentrubewriter.files.wordpress.com/2012/04/dragon16.png"
+width="256" height=auto>
+<script> 
+var object = document.getElementById('item');
+var object2 = document.getElementById('item2');
+var object3 = document.getElementById('item3');
+var object4 = document.getElementById('item4');
+var update_loop = setInterval(move, 2000);
+var update_loop2 = setInterval(move2, 3000);
+var update_loop3 = setInterval(move3, 2500);
+var update_loop4 = setInterval(move4, 1500);
+function move(){
+	var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+	var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+	var x = Math.floor(Math.random()*(w-363));
+	var y = Math.floor(Math.random()*(h-363));
+  
+	object.style.top = y + 'px';
+	object.style.left = x + 'px';
+};
+move();
+function move2(){
+	var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+	var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+	var x = Math.floor(Math.random()*(w-363));
+	var y = Math.floor(Math.random()*(h-363));
+  
+	object2.style.top = y + 'px';
+	object2.style.left = x + 'px';
+	
+};
+move2();
+function move3(){
+	var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+	var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+	var x = Math.floor(Math.random()*(w-363));
+	var y = Math.floor(Math.random()*(h-363));
+  
+	object3.style.top = y + 'px';
+	object3.style.left = x + 'px';
+};
+move3();
+function move4(){
+	var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+	var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+	var x = Math.floor(Math.random()*(w-363));
+	var y = Math.floor(Math.random()*(h-363));
+  
+	object4.style.top = y + 'px';
+	object4.style.left = x + 'px';
+};
+move4();
+</script>
+
+<br>
+<div class="H1">Markus Randma kunstiblogi</div>
+<br>
+<br>
+
+<p>
+<div_date>9. märts 2020<br></div_date>
+<div_H1>Jaan Toomiku kunstinäitus KUMUs<br><br></div_H1>
+Üldiselt polnud viga.<br>
+Kuid
+<a href="https://drive.google.com/uc?export=view&id=1L4BhD-iORU3zHmGwaNT2vIDoxyELG4Uq">
+<img src="https://drive.google.com/uc?export=view&id=1L4BhD-iORU3zHmGwaNT2vIDoxyELG4Uq" width="256">
+</a>
+jsdsdj
+</p>
+
+
+<p>Jaan Toomiku kunstinäitus KUMUs</p>
+
+</body>
+</head>
+</html>
