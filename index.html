@@ -30,8 +30,8 @@ body {
 }
 #item4 {
 	position: absolute;
-	transition: linear 1.5s;
-	animation: spin2 4s linear infinite;
+	transition: linear 4s;
+	animation: spin2 10s linear infinite;
 	border:0;
 
 }
@@ -103,7 +103,7 @@ var object4 = document.getElementById('item4');
 var update_loop = setInterval(move, 2000);
 var update_loop2 = setInterval(move2, 3000);
 var update_loop3 = setInterval(move3, 2500);
-var update_loop4 = setInterval(move4, 1500);
+var update_loop4 = setInterval(move4, 4000);
 function move(){
 	var w = window.innerWidth
 || document.documentElement.clientWidth
