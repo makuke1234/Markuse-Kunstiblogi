@@ -5,8 +5,16 @@
 <style>
 
 body {
-	
-	background-color: rgb(219,214,239)
+	background: linear-gradient(270deg, #00ffdb, #feff00, #00ff5f);
+	background-size: 600% 600%;
+
+	animation: background-animation 30s ease infinite;
+
+	@keyframes background-animation { 
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
+	}
 }
 #item { 
 	position: absolute;
