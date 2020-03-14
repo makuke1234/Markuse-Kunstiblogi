@@ -17,7 +17,7 @@ body {
 #item { 
 	position: absolute;
 	transition: linear 2s;
-	animation: spin 10s linear infinite;
+	animation: spin 20s linear infinite;
 	border:0;
 }
 #item2 {
@@ -49,7 +49,7 @@ p {
   padding: 10px;
   margin: auto;
   margin-top: 20px;
-  width: 90%;
+  width: 70%;
   background-color: rgb(222, 234, 226);
   postition: relative;
   transform: translate(50,0);
@@ -57,9 +57,11 @@ p {
   box-shadow: 2px 3px 8px #888888;
   font-family: Verdana;
   border-radius: 3px;
-  
+  text-align: justify;
 }
-div_H1 {
+
+
+div_H {
 	color: rgb(10,40,50);
 	font-size: 25px;
 	text-shadow: 1px 1px 2px #001030;
@@ -79,35 +81,76 @@ div_koht {
 	font-size: 12px;
 	
 }
+
+
+
 img {
-	max-width: 50%;
+	position: relative;
+}
+
+
+img.pic_large {
+	width: 100%;
 	border-radius: 4px;
 	border: 1px solid #ddd;
 	margin-left: auto;
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-bottom: 5px;
 	transition: 0.2s;
-}
-img:hover {
-	cursor: pointer;
-	opacity: 0.7;
+	
 }
 img.pic {
 	width: 70%;
-	height: auto;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	transition: 0.2s;
+	
+}
+img.pic_small {
+	width: calc(50% - 5px);
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	transition: 0.2s;
+	
+}
+div_img_alt {
+	font-size: 15px;
+	color: rgb(50,50,50);
+	font-style: italic;
+}
+img.pic:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+div_used {
+	color: rgb(50,50,50);
+	font-size: 15px;
+	font-family: Verdana;
+}
+div_used_H {
+	color: rgb(50,50,50);
+	font-weight: bold;
+	font-size: 20px;
+	font-family: Verdana;
 }
 </style>
 <img id="item"
-src="sierpinski.png"
+src="./assets/sierpinski.png"
 width="256" height=auto>
 <img id="item2"
-src="palette.png"
+src="./assets/palette.png"
 width="256" height=auto>
 <img id="item3"
-src="palette.png"
+src="./assets/palette.png"
 width="256" height=auto>
 <img id="item4"
-src="dragon16.png"
+src="./assets/dragon16.png"
 width="256" height=auto>
 <script> 
 var object = document.getElementById('item');
@@ -184,20 +227,134 @@ move4();
 
 <p>
 <div_date>12. märts 2020<br></div_date>
-<div_H1>Tulevik on tunni aja pärast. Eesti kunst 1990. aastatel<br></div_H1>
+<div_H>Tulevik on tunni aja pärast. Eesti kunst 1990. aastatel<br></div_H>
 <div_koht>
 Kuraator: Eha Komissarov<br>
-Koht: KUMU<br><br></div_koht>
-Test.<br>
-test<br>
-<a href="https://drive.google.com/uc?export=view&id=1L4BhD-iORU3zHmGwaNT2vIDoxyELG4Uq">
-<img class="pic" src="https://drive.google.com/uc?export=view&id=1L4BhD-iORU3zHmGwaNT2vIDoxyELG4Uq">
-</a>
+Koht: KUMU 4. korrus<br><br></div_koht>
+
+Külastasin KUMU 1990. Eesti kunsti tutvustavat kunstinäitust, kus olid esindatud Mart Viljuse, Raoul Kurvitza, Anu Põdra, Inessa Josingi,
+Ene-Liis Semperi, Toomas Kalve, Marco Laimre, Mare Tralla, Liina Siiba, Mark Raidpere ja Toomas Volkmanni kunstiteosed. 
+Kõige huvitavam on see, et näiteks Mart Viljus ei olegi elukutselt kunstnik, vaid hoopis insener
+
+Külastasin näitust,
+sest mind on alati huvitanud elu Eestis 90-ndatel ning 2000-ndate alguses. Mul on nimelt tunnen nostalgiat 2000-ndate alguse peale ning mul
+on välja kujunenud suur huvi tunda 90-ndate lõpu vastu. Näitusel oli palju huvi pakkuvaid elemente. Kõige huvitavam neist programmeerimisega
+seotud installatsioon "Pentatonic Color System", mis koosneb 20-st monitorist. Näituse pealkiri on laenatud
+punkbändi J.M.K.E. 1993. aastal ilmunud laulult, mis annab edasi kõiki väärtuseid pea peale keeratud kümnendi absurdsest meeleolust. Näitusele kaasatud
+kunstnikud on valitud näitusele selle mõttega, et nad avaldasid uudse visuaalse keele ning teemavalikuga mõju 1990. aastate kunstile nii kohalikul
+kui ka isegi rahvusvahelisel tasandil.<br>
 <br>
-jsdsdj
+Näitusel oli näha palju fotokunsti, mis väljendas fotokunsti tähtsust kui kunstiliigina 1990-ndatel:<br>
+<a href="./images/0001_Tulevik/1.jpg">
+<img class="pic_large" src="./images/0001_Tulevik/1.jpg"></a>
+<div_img_alt><br>Toomas Volkmann (vasakult paremale): Elsa tiigerliiliaga (1994), David adruga (1994), Õde-vend Emily ja Christian (1994),
+Johnny murtud ingliga (1994)<br></div_img_alt><br>
+
+<a href="./images/0001_Tulevik/2.jpg">
+<img class="pic_large" src="./images/0001_Tulevik/2.jpg"></a>
+<div_img_alt><br>Liina Siib: Süütuse presumptsioon I (1997)<br></div_img_alt><br>
+
+
+Näitusel olevad teosed andsid mõista, et näituse mõte on seotud 90-ndate kiire tehnoloogiaarenguga ning Eesti taasiseseisvumisega.
+Paljud teosed pilastasid vananenud tehnoloogia vananemist näidates vananenud tehnoloogia kitsaskohti, kuid samas ka teisest küljest
+inimeste saamatust uue tehnoloogiaga kohaneda. Üks hea näide kiiresti arenevast maailmast on Mart Viljuse installatsioon (TM) Trademarks:<br>
+<a href="./images/0001_Tulevik/3.jpg">
+<img class="pic" src="./images/0001_Tulevik/3.jpg"></a>
+<div_img_alt><br>Mart Viljus: (TM) Trademarks (1997)<br></div_img_alt><br>
+Tema teoses on paljudel tuntud kaubamärkidega tarbekaupadel ära vahetatud kaubamärgid. Viljuse teose mõte on näidata, kuidas firmade
+ainus eesmärk on teenida raha, müües mida tahes. See tähendab, et firmasid ei huvita see, mida müüakse, vaid see, kas selle asjaga
+on võimalik palju raha teenida. Seepärast ei tundugi nii imelik, kui poeriiulitele tekiks Nokia Cola, tuntud pesupulbribrändi OMO
+nimeline müsli või Arieli siirup. Samuti ei paneks imestama, kui ühel päeval oleks võimalik osta Fazeri kassikrõbinaid või Marlboro šampooni.
+<br>
+Kõige enam köitis mind aga Raoul Kurvitza installatsioon Pentatonic Color System Programmid 01, 02 ja 03:<br>
+<a href="./images/0001_Tulevik/4.jpg">
+<img class="pic_small" src="./images/0001_Tulevik/4.jpg"></a>
+<a href="./images/0001_Tulevik/5.jpg">
+<img class="pic_small" src="./images/0001_Tulevik/5.jpg"></a>
+<br>
+<a href="./images/0001_Tulevik/6.jpg">
+<img class="pic_large" src="./images/0001_Tulevik/6.jpg"></a>
+<div_img_alt><br>Raoul Kurvitz: Pentatonic Color System Programmid 01 (1994), 02 (1999) ja 03 (2020) (Heli: Ariel Lagle,
+Programmeerimine: Andres Lepp)<br></div_img_alt><br>
+
+
+Raoul Kurvitz lõpetas 1984. aastal Eesti NSV Riikliku Kunstiinstituudi
+arhitektina. 1986. aastal moodustas ta oma kursusevenna Urmas Muruga
+üleminekuaja ühe radikaalsema kunstiürituse Rühm T. Loomeinimesi koondav
+rühmitus tegutses laial kunstiväljal - performance, maal, installatsioon,
+foto, video, muusika - ning nende seisukohalt oli kunsti piiride puudumine
+loomise üks eeldusi.<br><br>
+
+1980. aastatel neoekspressiivsest maalist huvitunud Kurvitz hakkas 1990.
+aastate keskpaigas looma suureformaadilisi spetsiifilistest materjalidest
+installatsioone. See 20 monitorile loodud meediainstallatsioon on teiste
+arvates tema loomingus erandlik ja silmapaistev teos, milles autor realiseerib
+tehnoloogiliste vahendite kaudu oma kogemusi maalijana. Teos esitab
+kolmeosalise värvuse- ja sümbolitsükli, mis omavahel summeeruvad optiliseks
+valguseks. Tegu on ühe esimese mastaapse meediainstallatsiooniga eesti kunstis
+- algset versiooni eksponeeriti 1994. aastal Sorose Kaasaegse Kunsti Keskuse
+aastanäitusel "Olematu kunst" ning selle uuendatud varianti 1999. aastal
+Kurvitza isikunäitusel "Sümfoonia Si-b minor; Postapokalüptika". Selles
+installatsioonis on varasemalt loodud tööd tervikuks ühendatud.<br><br>
+
+Mina aga arvan, et tegu ei ole tervikuga, vaid tulemas on veel kaks programmi.
+Sest miks muidu panna teose pealkirja "Pentatonic"? Pentatoonilisus on pigem
+seotud muusikaga kui pildiga ning arvestades seda, et ta on juba mitu korda
+oma teost uuendanud, siis minu arvates on teose sügavam mõte see, et
+programmeerimises saab alati teha parema ja uuema versiooni programmist.
+
+Teos tekitas minus peamiselt nostalgiat 2000-ndate alguse vastu, kuid
+sain näha, mis oli võimalik juba 90-ndatel. Teoses on kasutatud
+peamiselt eredaid toone, kuid pime ruum andis märku,
+et 90-ndatel oli aruvutisõltuvus nii tugev probleem, et sageli kasutati
+arvuteid hiliste öötundideni.
+
+Ühtlasi näitab teos ka seda, et tänapäeva kunstis on väga oluliseks saanud
+programmeerimine ning olles ise programmeerija, võin veendunult öelda, et
+tegelik kunst peitub programmeerimises. Seega programmeerimine on kunst
+ja kunst ongi programmeerimine. Kui inimesed loovad kunsti, siis nad ei tee
+muud, kui programmeerivad. Maalikunstis programmeerivad inimesed oma meeli
+ja liikuvaid kehaosi, et valida sobivaid värve, mida kanda lõuendile sobivalt
+ning sobivasse kohta. Arvutite programmeerimisel programmeerib programmeerija
+aga arvutit tegema seda, mida tahes, et lihtsustada või automatiseerida inimese tööd.
+Programmeerimine on väga loominguline tegevus, sest programmeerimises saab läheneda
+probleemidele mitut moodi, kasutades erinevat käsustikku, süntaksi ning isegi teksti
+paigutust.<br><br>
+
+Jõudes järeldusele, et programmeerimine on kunst, siis järelikult ei ole õigust
+sedavõrd tunnustada antud teose autorit selle teose loomise eest, vaid tunnustada
+tuleks tegeliku kunstilise töö tegijat, programmeerija Andres Leppa. Seega järeldan
+mina, et selle installatsiooni tegelik autor ei ole mitte Raoul Kurvitz, vaid
+hoopis Andres Lepp.<br><br>
+
+Minu arvates tahab kunstnik selle teosega näidata, et tänapäeval ei ole vaja millegi
+mastaapse saavutamiseks omada oskusi antud alal, vaid tuleb hoopis tunda inimesi, kes
+oskavad sinu plaane raha eest teostada. Samuti viitab see infoühiskonnas tegevuste
+jaotamisele, mis kiirendab tööd ning tõstab tulemuse kvaliteeti oluliselt.
+
+<br>
+<br>
+____________________<br>
+<div_used_H>Kasutatud allikad:<br></div_used_H>
+<div_used>
+
+Kumu ajaveeb (2020) "Tulevik on tunni aja pärast" - Uus 1990. aastate kunsti avav püsiekspositsioon. Loetud:
+<a href src=https://kumu.ekm.ee/blogi/tulevik-tunni-aja-parast-uus-1990-aastate-kunsti-avav-pusiekspositsioon/>
+https://kumu.ekm.ee/blogi/tulevik-tunni-aja-parast-uus-1990-aastate-kunsti-avav-pusiekspositsioon/
+</a>
+, 14.03.2020
+<br>
+
+Eesti Teadusinfosüsteem (2020) Mart Viljus. Loetud:
+<a href src="https://www.etis.ee/CV/Mart_Viljus/est">
+https://www.etis.ee/CV/Mart_Viljus/est
+</a>
+, 14.03.2020
+<br>
+
+
+</div_used>
 </p>
-
-
 
 
 </body>
