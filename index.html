@@ -175,10 +175,8 @@ var update_loop4 = setInterval(move4, 4000);
 function move(){
 	var w = window.innerWidth
 || document.documentElement.clientWidth
-|| document.body.clientWidth;
-	var h = window.innerHeight
-|| document.documentElement.clientHeight
-|| document.body.clientHeight;
+|| document.document.body.clientWidth;
+	var h = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
 	var x = Math.floor(Math.random()*(w-363));
 	var y = Math.floor(Math.random()*(h-363));
   
@@ -189,10 +187,8 @@ move();
 function move2(){
 	var w = window.innerWidth
 || document.documentElement.clientWidth
-|| document.body.clientWidth;
-	var h = window.innerHeight
-|| document.documentElement.clientHeight
-|| document.body.clientHeight;
+|| document.document.body.clientWidth;
+	var h = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
 	var x = Math.floor(Math.random()*(w-363));
 	var y = Math.floor(Math.random()*(h-363));
   
@@ -204,10 +200,8 @@ move2();
 function move3(){
 	var w = window.innerWidth
 || document.documentElement.clientWidth
-|| document.body.clientWidth;
-	var h = window.innerHeight
-|| document.documentElement.clientHeight
-|| document.body.clientHeight;
+|| document.document.body.clientWidth;
+	var h = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
 	var x = Math.floor(Math.random()*(w-363));
 	var y = Math.floor(Math.random()*(h-363));
   
@@ -218,10 +212,8 @@ move3();
 function move4(){
 	var w = window.innerWidth
 || document.documentElement.clientWidth
-|| document.body.clientWidth;
-	var h = window.innerHeight
-|| document.documentElement.clientHeight
-|| document.body.clientHeight;
+|| document.document.body.clientWidth;
+	var h = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
 	var x = Math.floor(Math.random()*(w-363));
 	var y = Math.floor(Math.random()*(h-363));
   
