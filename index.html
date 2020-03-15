@@ -14,16 +14,17 @@ body {
 	50%{background-position:100% 50%}
 	100%{background-position:0% 50%}
 }
-#item { 
+
+#item1 { 
 	position: absolute;
 	transition: linear 2s;
-	animation: spin 20s linear infinite;
+	animation: spin1 20s linear infinite;
 	border:0;
 }
 #item2 {
 	position: absolute;
 	transition: linear 3s;
-	animation: spin 15s linear infinite;
+	animation: spin1 15s linear infinite;
 	border:0;
 
 }
@@ -41,23 +42,24 @@ body {
 	border:0;
 
 }
-  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-  @keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+@keyframes spin1 { 100% {transform: rotate( 360deg); } }
+@keyframes spin2 { 100% {transform: rotate(-360deg); } }
 
 p {
-  border: 2px solid powderblue;
-  padding: 10px;
-  margin: auto;
-  margin-top: 20px;
-  width: 70%;
-  background-color: rgb(222, 234, 226);
-  postition: relative;
-  transform: translate(50,0);
-  opacity: 0.8;
-  box-shadow: 2px 3px 8px #888888;
-  font-family: Verdana;
-  border-radius: 3px;
-  text-align: justify;
+	border: 2px solid powderblue;
+	padding: 10px;
+	margin: auto;
+	margin-top: 20px;
+	width: 70%;
+	background-color: rgb(222, 234, 226);
+	postition: relative;
+	transform: translate(50,0);
+	opacity: 0.8;
+	box-shadow: 2px 3px 8px #888888;
+	font-family: Verdana;
+	border-radius: 3px;
+	text-align: justify;
 }
 
 
@@ -79,7 +81,6 @@ div_date {
 div_koht {
 	color: rgb(50,50,50);
 	font-size: 12px;
-	
 }
 
 
@@ -87,8 +88,6 @@ div_koht {
 img {
 	position: relative;
 }
-
-
 img.pic_large {
 	width: 100%;
 	border-radius: 4px;
@@ -119,7 +118,6 @@ img.pic_small {
 	transition: 0.2s;
 	
 }
-
 img.pic_large:hover {
 	cursor: pointer;
 	opacity: 0.7;
@@ -132,6 +130,7 @@ img.pic_small:hover {
 	cursor: pointer;
 	opacity: 0.7;
 }
+
 
 div_img_alt {
 	font-size: 15px;
@@ -151,76 +150,83 @@ div_used_H {
 	font-family: Verdana;
 }
 </style>
-<img id="item"
+<img id="item1"
 src="./assets/sierpinski.png"
-width="256" height=auto>
+width="256" height="auto">
 <img id="item2"
 src="./assets/palette.png"
-width="256" height=auto>
+width="256" height="auto">
 <img id="item3"
 src="./assets/palette.png"
-width="256" height=auto>
+width="256" height="auto">
 <img id="item4"
 src="./assets/dragon16.png"
-width="256" height=auto>
+width="256" height="auto">
 <script> 
-var object = document.getElementById('item');
+var object1 = document.getElementById('item1');
 var object2 = document.getElementById('item2');
 var object3 = document.getElementById('item3');
 var object4 = document.getElementById('item4');
-var update_loop = setInterval(move, 2000);
+var update_loop1 = setInterval(move1, 2000);
 var update_loop2 = setInterval(move2, 3000);
 var update_loop3 = setInterval(move3, 2500);
 var update_loop4 = setInterval(move4, 4000);
-function move(){
+move1();
+move2();
+move3();
+move4();
+function move1() {
 	var w = window.innerWidth
-|| document.documentElement.clientWidth
-|| document.document.body.clientWidth;
-	var h = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
-	var x = Math.floor(Math.random()*(w-363));
-	var y = Math.floor(Math.random()*(h-363));
-  
-	object.style.top = y + 'px';
-	object.style.left = x + 'px';
+	|| document.documentElement.clientWidth
+	|| document.document.body.clientWidth;
+	var h = window.innerHeight
+	|| document.documentElement.clientHeight
+	|| document.document.body.clientHeight;
+	var x = Math.floor(Math.random()*(w-257));
+	var y = Math.floor(Math.random()*(h-222))+window.scrollY;
+
+	object1.style.top = y + 'px';
+	object1.style.left = x + 'px';
 };
-move();
-function move2(){
+function move2() {
 	var w = window.innerWidth
-|| document.documentElement.clientWidth
-|| document.document.body.clientWidth;
-	var h = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
-	var x = Math.floor(Math.random()*(w-363));
-	var y = Math.floor(Math.random()*(h-363));
-  
+	|| document.documentElement.clientWidth
+	|| document.document.body.clientWidth;
+	var h = window.innerHeight
+	|| document.documentElement.clientHeight
+	|| document.document.body.clientHeight;
+	var x = Math.floor(Math.random()*(w-257));
+	var y = Math.floor(Math.random()*(h-172))+window.scrollY;
+
 	object2.style.top = y + 'px';
 	object2.style.left = x + 'px';
-	
 };
-move2();
 function move3(){
 	var w = window.innerWidth
-|| document.documentElement.clientWidth
-|| document.document.body.clientWidth;
-	var h = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
-	var x = Math.floor(Math.random()*(w-363));
-	var y = Math.floor(Math.random()*(h-363));
-  
+	|| document.documentElement.clientWidth
+	|| document.document.body.clientWidth;
+	var h = window.innerHeight
+	|| document.documentElement.clientHeight
+	|| document.document.body.clientHeight;
+	var x = Math.floor(Math.random()*(w-257));
+	var y = Math.floor(Math.random()*(h-172))+window.scrollY;
+
 	object3.style.top = y + 'px';
 	object3.style.left = x + 'px';
 };
-move3();
 function move4(){
 	var w = window.innerWidth
-|| document.documentElement.clientWidth
-|| document.document.body.clientWidth;
-	var h = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
-	var x = Math.floor(Math.random()*(w-363));
-	var y = Math.floor(Math.random()*(h-363));
-  
+	|| document.documentElement.clientWidth
+	|| document.document.body.clientWidth;
+	var h = window.innerHeight
+	|| document.documentElement.clientHeight
+	|| document.document.body.clientHeight;
+	var x = Math.floor(Math.random()*(w-256));
+	var y = Math.floor(Math.random()*(h-172))+window.scrollY;
+
 	object4.style.top = y + 'px';
 	object4.style.left = x + 'px';
 };
-move4();
 </script>
 
 <br>
@@ -235,39 +241,42 @@ move4();
 Kuraator: Eha Komissarov<br>
 Koht: KUMU 4. korrus<br><br></div_koht>
 
-Külastasin KUMU 1990. Eesti kunsti tutvustavat kunstinäitust, kus olid esindatud Mart Viljuse, Raoul Kurvitza, Anu Põdra, Inessa Josingi,
+Külastasin KUMU 1990. Eesti kunsti tutvustavat kunstinäitust, kus olid esindatud Mart Viljuse, Raoul Kurvitza, Anu Põdra,
+Inessa Josingi,
 Ene-Liis Semperi, Toomas Kalve, Marco Laimre, Mare Tralla, Liina Siiba, Mark Raidpere ja Toomas Volkmanni kunstiteosed. 
 Kõige huvitavam on see, et näiteks Mart Viljus ei olegi elukutselt kunstnik, vaid hoopis insener.
 
 Külastasin näitust,
-sest mind on alati huvitanud elu Eestis 90-ndatel ning 2000-ndate alguses. Mul on nimelt tunnen nostalgiat 2000-ndate alguse peale ning mul
-on välja kujunenud suur huvi tunda 90-ndate lõpu vastu. Näitusel oli palju huvi pakkuvaid elemente. Kõige huvitavam neist programmeerimisega
-seotud installatsioon "Pentatonic Color System", mis koosneb 20-st monitorist. Näituse pealkiri on laenatud
-punkbändi J.M.K.E. 1993. aastal ilmunud laulult, mis annab edasi kõiki väärtuseid pea peale keeratud kümnendi absurdsest meeleolust. Näitusele kaasatud
-kunstnikud on valitud näitusele selle mõttega, et nad avaldasid uudse visuaalse keele ning teemavalikuga mõju 1990. aastate kunstile nii kohalikul
-kui ka isegi rahvusvahelisel tasandil.<br>
+sest mind on alati huvitanud elu Eestis 90-ndatel ning 2000-ndate alguses. Mul on nimelt tunnen nostalgiat 2000-ndate alguse
+peale ning mul on välja kujunenud suur huvi tunda 90-ndate lõpu vastu. Näitusel oli palju huvi pakkuvaid elemente. Kõige
+huvitavam neist programmeerimisega seotud installatsioon "Pentatonic Color System", mis koosneb 20-st monitorist. Näituse
+pealkiri on laenatud punkbändi J.M.K.E. 1993. aastal ilmunud laulult, mis annab edasi kõiki väärtuseid pea peale keeratud
+kümnendi absurdsest meeleolust. Näitusele kaasatud kunstnikud on valitud näitusele selle mõttega, et nad avaldasid uudse
+visuaalse keele ning teemavalikuga mõju 1990. aastate kunstile nii kohalikul kui ka isegi rahvusvahelisel tasandil.<br>
 <br>
 Näitusel oli näha palju fotokunsti, mis väljendas fotokunsti tähtsust kui kunstiliigina 1990-ndatel:<br>
 <a href="./images/0001_Tulevik/1.jpg">
 <img class="pic_large" src="./images/0001_Tulevik/1.jpg"></a>
-<div_img_alt><br>Toomas Volkmann (vasakult paremale): Elsa tiigerliiliaga (1994), David adruga (1994), Õde-vend Emily ja Christian (1994),
-Johnny murtud ingliga (1994)<br></div_img_alt><br>
+<div_img_alt><br>Toomas Volkmann (vasakult paremale): Elsa tiigerliiliaga (1994), David adruga (1994), Õde-vend Emily ja
+Christian (1994), Johnny murtud ingliga (1994)<br></div_img_alt><br>
 
 <a href="./images/0001_Tulevik/2.jpg">
 <img class="pic_large" src="./images/0001_Tulevik/2.jpg"></a>
 <div_img_alt><br>Liina Siib: Süütuse presumptsioon I (1997)<br></div_img_alt><br>
 
 
-Näitusel olevad teosed andsid mõista, et näituse mõte on seotud 90-ndate kiire tehnoloogiaarenguga ning Eesti taasiseseisvumisega.
-Paljud teosed pilastasid vananenud tehnoloogia vananemist näidates vananenud tehnoloogia kitsaskohti, kuid samas ka teisest küljest
-inimeste saamatust uue tehnoloogiaga kohaneda. Üks hea näide kiiresti arenevast maailmast on Mart Viljuse installatsioon (TM) Trademarks:<br>
+Näitusel olevad teosed andsid mõista, et näituse mõte on seotud 90-ndate kiire tehnoloogiaarenguga ning Eesti
+taasiseseisvumisega. Paljud teosed pilastasid vananenud tehnoloogia vananemist näidates vananenud tehnoloogia kitsaskohti,
+kuid samas ka teisest küljest inimeste saamatust uue tehnoloogiaga kohaneda. Üks hea näide kiiresti arenevast maailmast
+on Mart Viljuse installatsioon (TM) Trademarks:<br>
 <a href="./images/0001_Tulevik/3.jpg">
 <img class="pic" src="./images/0001_Tulevik/3.jpg"></a>
 <div_img_alt><br>Mart Viljus: (TM) Trademarks (1997)<br></div_img_alt><br>
-Tema teoses on paljudel tuntud kaubamärkidega tarbekaupadel ära vahetatud kaubamärgid. Viljuse teose mõte on näidata, kuidas firmade
-ainus eesmärk on teenida raha, müües mida tahes. See tähendab, et firmasid ei huvita see, mida müüakse, vaid see, kas selle asjaga
-on võimalik palju raha teenida. Seepärast ei tundugi nii imelik, kui poeriiulitele tekiks Nokia Cola, tuntud pesupulbribrändi OMO
-nimeline müsli või Arieli siirup. Samuti ei paneks imestama, kui ühel päeval oleks võimalik osta Fazeri kassikrõbinaid või Marlboro šampooni.
+Tema teoses on paljudel tuntud kaubamärkidega tarbekaupadel ära vahetatud kaubamärgid. Viljuse teose mõte on näidata, kuidas
+firmade ainus eesmärk on teenida raha, müües mida tahes. See tähendab, et firmasid ei huvita see, mida müüakse, vaid see,
+kas selle asjaga on võimalik palju raha teenida. Seepärast ei tundugi nii imelik, kui poeriiulitele tekiks Nokia Cola,
+tuntud pesupulbribrändi OMO nimeline müsli või Arieli siirup. Samuti ei paneks imestama, kui ühel päeval oleks võimalik
+osta Fazeri kassikrõbinaid või Marlboro šampooni.<br>
 <br>
 Kõige enam köitis mind aga Raoul Kurvitza installatsioon Pentatonic Color System Programmid 01, 02 ja 03:<br>
 <a href="./images/0001_Tulevik/4.jpg">
@@ -277,8 +286,8 @@ Kõige enam köitis mind aga Raoul Kurvitza installatsioon Pentatonic Color Syst
 <br>
 <a href="./images/0001_Tulevik/6.jpg">
 <img class="pic_large" src="./images/0001_Tulevik/6.jpg"></a>
-<div_img_alt><br>Raoul Kurvitz: Pentatonic Color System Programmid 01 (1994), 02 (1999) ja 03 (2020) (Heli: Ariel Lagle,
-Programmeerimine: Andres Lepp)<br></div_img_alt><br>
+<div_img_alt><br>Raoul Kurvitz: Pentatonic Color System Programmid 01 (1994), 02 (1999) ja 03 (2020) (Heli:
+Ariel Lagle, Programmeerimine: Andres Lepp)<br></div_img_alt><br>
 
 
 Raoul Kurvitz lõpetas 1984. aastal Eesti NSV Riikliku Kunstiinstituudi
