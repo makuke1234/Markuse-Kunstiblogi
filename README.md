@@ -1,7 +1,7 @@
 # Markuse-kunstiblogi
 See on minu kunstiblogi GitHub'i repository.
 
-Siin repository's on minu kunstiblogi, kus failid jaotuvad järgmiselt:
+Siin repository's on minu kunstiblogi, kus failid jaotuvad järgmiselt:<br>
 {
   index.html -> Esileht, kus on iframe'id ja lingid postitustele
   ./posts/* -> postitused
